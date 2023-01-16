@@ -1,0 +1,18 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.workitem {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media only screen and (min-width: 900px) {
+  .works {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
