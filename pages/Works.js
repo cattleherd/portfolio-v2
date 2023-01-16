@@ -45,7 +45,7 @@ const Works = () => (
         <Box>
           <Image
             minH={"150px"}
-            src="campground.png"
+            src="campground.PNG"
             alt="campground app"
             borderRadius="xl"
             _hover={{
@@ -65,7 +65,7 @@ const Works = () => (
           <Image
             maxH={"150px"}
             w="100%"
-            src="pokedex.png"
+            src="pokedex.PNG"
             alt="pokemon app"
             borderRadius="xl"
             _hover={{
@@ -82,7 +82,7 @@ const Works = () => (
         <Box>
           <Image
             minH={"150px"}
-            src="campground.png"
+            src="campground.PNG"
             alt="campground app"
             borderRadius="xl"
             _hover={{
