@@ -28,7 +28,12 @@ export default function Radsocial() {
                 alt="bonfire image"
                 margin="0 auto"
               />
-              <Heading as="h4" fontSize="35px" paddingLeft={'10px'} variant="page-title">
+              <Heading
+                as="h4"
+                fontSize="35px"
+                paddingLeft={"10px"}
+                variant="page-title"
+              >
                 RadCamp
               </Heading>
             </Box>
@@ -42,11 +47,12 @@ export default function Radsocial() {
                 textAlign={"center"}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  porttitor accumsan augue nec ultrices. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Sed porttitor accumsan
-                  augue nec ultrices. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Sed porttitor accumsan augue nec ultrices.
+                  RadCamp is a fullstack web app designed for people people who
+                  like to explore new trails and campgrounds. It allows users to
+                  upload a description and geopositioning of various places.
+                  Users can also leave reviews as well. The app is powered with
+                  mongodb, expressjs, and nodejs. The views are rendered with
+                  the EJs templating engine.
                 </p>
               </Box>
             </Box>

@@ -6,24 +6,25 @@ import { useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function Radsocial() {
-    const bg = useColorModeValue('white', 'blue')
+  const bg = useColorModeValue("white", "blue");
 
   return (
     <div>
       <Center>
         <Box w={{ base: "100%", sm: "60%" }} ml="5%" mr="5%" mb="5%">
           <Box display={"flex"} flexDirection={{ base: "column", lg: "row" }}>
-            <Box bg={bg}
+            <Box
+              bg={bg}
               style={{
-                maxWidth:'200px',
-                minWidth:'200px',
-                height:'200px',
-                position:'relative',
-                paddingRight:'20%',
-                borderRadius:'50%',
-                marginTop:'0%',
-                marginLeft:'auto',
-                marginRight:'auto'
+                maxWidth: "200px",
+                minWidth: "200px",
+                height: "200px",
+                position: "relative",
+                paddingRight: "20%",
+                borderRadius: "50%",
+                marginTop: "0%",
+                marginLeft: "auto",
+                marginRight: "auto",
               }}
             >
               <Heading
@@ -50,14 +51,13 @@ export default function Radsocial() {
                 bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
                 css={{ backdropFilter: "blur(10px)" }}
                 rounded="xl"
-                textAlign={"center"}
+                textAlign={"left"}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  porttitor accumsan augue nec ultrices. Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. Sed porttitor accumsan
-                  augue nec ultrices. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Sed porttitor accumsan augue nec ultrices.
+                  RadSocial is a social networking app that involves features
+                  like sharing posts, a feed of friend's posts (timeline), and a
+                  live messaging feature. The app is powered with react,
+                  mongodb, expressjs and nodejs.
                 </p>
               </Box>
             </Box>

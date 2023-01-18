@@ -66,39 +66,24 @@ const Works = () => (
         </Box>
         <Box className="workitem" w="250px" h="250px" mb="10%">
           <Box>
-            <Image
-              maxH={"150px"}
-              w="100%"
-              src="pokedex.PNG"
-              alt="pokemon app"
-              borderRadius="xl"
-              _hover={{
-                cursor: "pointer",
-              }}
-            />
+            <Transition>
+              <NextLink href="/Pokedex">
+                <Image
+                  maxH={"150px"}
+                  w="100%"
+                  src="pokedex.PNG"
+                  alt="pokemon app"
+                  borderRadius="xl"
+                  _hover={{
+                    cursor: "pointer",
+                  }}
+                />
+              </NextLink>
+            </Transition>
             <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
               Pokedex
             </Heading>
             <Text>A catalogue of information of 600 pokemon</Text>
-          </Box>
-        </Box>
-        <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Image
-              minH={"150px"}
-              src="campground.PNG"
-              alt="campground app"
-              borderRadius="xl"
-              _hover={{
-                cursor: "pointer",
-              }}
-            />
-            <Heading size={"md"} mt={"15px"} mb={"15px"} textAlign="center">
-              Radcamp
-            </Heading>
-            <Text display={"flex"} justifyContent={"center"}>
-              A campgrounds app
-            </Text>
           </Box>
         </Box>
       </div>

@@ -11,7 +11,7 @@ import {
   Image,
   Center,
   Button,
-  shouldForwardProp,
+  shouldForwardProp,Text
 } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import { Model } from "../components/model";
@@ -49,7 +49,7 @@ export default function Home() {
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         <Text fontSize={'lg'}>Hello, I'm a web developer from Toronto Canada.</Text>
       </Box>
       <Center display="flex" flexDirection={{ base: "column", sm: "row" }}>
         <Box>
@@ -83,15 +83,17 @@ export default function Home() {
         <Heading as="u" mb={"20px"}>
           Bio
         </Heading>
-        <p>
-          Proin eu elit auctor, vestibulum turpis sit amet, porttitor leo. Duis
-          cursus est id auctor sollicitudin. Sed a semper urna. Praesent in
-          purus in tortor fermentum pharetra vel a metus. Suspendisse pharetra
-          interdum metus, egestas dapibus nunc varius vel. Pellentesque
-          volutpat, mi in aliquet gravida, neque nulla eleifend ex, ut consequat
-          libero lacus sit amet odio. Donec mi nulla, dignissim non lectus a,
-          porttitor lobortis magna. In scelerisque gravida tincidunt.
-        </p>
+        <Box borderRadius="lg"
+        mb={6}
+        mt={10}
+        mx={"auto"}
+        p={3}
+        textAlign="left"
+        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+        css={{ backdropFilter: "blur(10px)" }}>
+          I am naturally curious and enjoy challenges that help me learn and grow. I am passionate about web development and try my best to stay current despite the ever changing dynamic of web technologies.
+          In my free time I like to listen to audiobooks, explore new hiking trails, or visiting cafe's in order to perfect my craft in web development. 
+        </Box>
       </Box>
       <Transition>
         <NextLink href="/Works" passHref>
