@@ -21,7 +21,7 @@ export default function Pokedex() {
           </Heading>
           <Box display={"flex"} flexDirection={{ base: "column", lg: "row" }} p='40px'>
             <Image
-              src="/pokedex1.png"
+              src="/pokedex1.PNG"
               height={{ base: '80%', lg:'50%'}}
               width={{ base: '80%', lg:'50%'}}
               alt="image of pokemon app"
