@@ -27,5 +27,5 @@ export default function (req, res) {
       else
         console.log(info)
     })
-    res.status(200)
+    res.status(200).send('success')
   }

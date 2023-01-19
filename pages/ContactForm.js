@@ -29,7 +29,6 @@ const ContactForm = () => {
         setSubmitted(true);
         setName("");
         setEmail("");
-        setBody("");
       } else {
         console.log("error");
       }
