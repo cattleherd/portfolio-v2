@@ -71,7 +71,7 @@ export default function Radsocial() {
                 />
               </video>
             </Box>
-            <NextLink href="https://rad-social.herokuapp.com" passHref>
+            <NextLink href="https://immense-island-92357.herokuapp.com/" passHref>
               <Center>
                 <Button mt={"40px"} mb={"40px"} w="150px">
                   Demo
