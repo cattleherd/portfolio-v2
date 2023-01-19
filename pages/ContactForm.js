@@ -25,7 +25,7 @@ const ContactForm = () => {
     }).then((res) => {
       console.log(res);
       if (res.status === 200) {
-        console.log("Response succeeded!");
+        alert("Email has been sent!");
         setSubmitted(true);
         setName("");
         setEmail("");
