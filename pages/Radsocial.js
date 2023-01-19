@@ -55,7 +55,7 @@ export default function Radsocial() {
               >
                 <p>
                   RadSocial is a social networking app that involves features
-                  like sharing posts, a feed of friend's posts (timeline), and a
+                  like sharing posts, a feed of friend&apos;s posts (timeline), and a
                   live messaging feature. The app is powered with react,
                   mongodb, expressjs and nodejs.
                 </p>

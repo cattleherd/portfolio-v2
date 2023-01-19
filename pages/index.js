@@ -49,7 +49,7 @@ export default function Home() {
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
       >
-         <Text fontSize={'lg'}>Hello, I'm a web developer from Toronto Canada.</Text>
+         <Text fontSize={'lg'}>Hello, I&apos;m a web developer from Toronto Canada.</Text>
       </Box>
       <Center display="flex" flexDirection={{ base: "column", sm: "row" }}>
         <Box>
@@ -92,7 +92,7 @@ export default function Home() {
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}>
           I am naturally curious and enjoy challenges that help me learn and grow. I am passionate about web development and try my best to stay current despite the ever changing dynamic of web technologies.
-          In my free time I like to listen to audiobooks, explore new hiking trails, or visiting cafe's in order to perfect my craft in web development. 
+          In my free time I like to listen to audiobooks, explore new hiking trails, or visiting cafe&apos;s in order to perfect my craft in web development. 
         </Box>
       </Box>
       <Transition>
