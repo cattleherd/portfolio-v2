@@ -44,7 +44,7 @@ export default function Pokedex() {
             </Box>
           </Box>
           <Box>
-            <NextLink href="https://react-pokedex-2.herokuapp.com/" passHref>
+            <NextLink href="https://animated-centaur-beb5d6.netlify.app/" passHref>
               <Center>
                 <Button mt={"40px"} mb={"40px"} w="150px">
                   Demo
