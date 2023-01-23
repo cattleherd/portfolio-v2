@@ -1,39 +1,27 @@
+import sendgrid from "@sendgrid/mail";
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function (req, res) {
-    require('dotenv').config()
-    
-    let nodemailer = require('nodemailer')
-    
-    const transporter = nodemailer.createTransport({
-      port: 465,
-      host: "smtp.gmail.com",
-      auth: {
-        user: process.env.USER,
-        pass: process.env.PASS,
-      },
-      secure: true,
-    })
-    const mailData = {
-      from: process.env.USER,
-      to: process.env.EMAIL,
-      subject: `Message From ${req.body.name}`,
-      text: req.body.message + " | Sent from: " + req.body.email,
-      html: `<div>${req.body.message}</div><p>Sent from:
-      ${req.body.email}</p>`
+export default function(){
+
+  async function sendEmail(req, res) {
+    try {
+      // console.log("REQ.BODY", req.body);
+      await sendgrid.send({
+        to: "radwan.ahmed@live.com", // Your email where you'll receive emails
+        from: "manuarorawork@gmail.com", // your website email address here
+        subject: `you got mail from ${req.body.email}, name is ${req.body.name}`,
+        html: `<div>${req.body.message}</div>`,
+      });
+    } catch (error) {
+      // console.log(error);
+      return res.status(error.statusCode || 500).json({ error: error.message });
     }
-    
-    const sendMessage = async ()=>{
-      await transporter.sendMail(mailData, function (err, info) {
-        if(err)
-          console.log(err)
-        else
-          res.status(200).send('success')
-          console.log(info)
-      })
-    }
-
-    sendMessage()
-
-
+  
+    return res.status(200).json({ error: "" });
   }
+  
+  sendEmail()
+
+}
