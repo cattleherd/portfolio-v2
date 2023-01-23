@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     let data = {
       name,
@@ -15,7 +15,7 @@ const ContactForm = () => {
       message,
     };
 
-    await fetch("/api/Contact", {
+    fetch("/api/Contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",

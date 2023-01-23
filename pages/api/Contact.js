@@ -1,27 +1,30 @@
-import sendgrid from "@sendgrid/mail";
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+import nodemailer from "nodemailer";
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function(){
-
-  async function sendEmail(req, res) {
-    try {
-      // console.log("REQ.BODY", req.body);
-      await sendgrid.send({
-        to: "radwan.ahmed@live.com", // Your email where you'll receive emails
-        from: "manuarorawork@gmail.com", // your website email address here
-        subject: `you got mail from ${req.body.email}, name is ${req.body.name}`,
-        html: `<div>${req.body.message}</div>`,
-      });
-    } catch (error) {
-      // console.log(error);
-      return res.status(error.statusCode || 500).json({ error: error.message });
+export default async (req, res) => {
+  const { name, email, message } = req.body;
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.USER,
+      pass: process.env.PASS
     }
-  
-    return res.status(200).json({ error: "" });
-  }
-  
-  sendEmail()
+  });
 
-}
+  try {
+    await transporter.sendMail({
+      from: process.env.USER,
+      to: process.env.EMAIL,
+      subject: `Contact form submission from ${req.body.name}`,
+      html: `<p>You have a contact form submission</p><br>
+        <p><strong>Email: </strong> ${req.body.email}</p><br>
+        <p><strong>Message: </strong> ${req.body.message}</p><br>
+      `
+    });
+  } catch (error) {
+    return res.status(500).json({ error: error.message || error.toString() });
+  }
+  return res.status(200).json({ error: "" });
+};
