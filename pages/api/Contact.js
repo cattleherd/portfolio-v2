@@ -23,11 +23,17 @@ export default function (req, res) {
       ${req.body.email}</p>`
     }
     
-    transporter.sendMail(mailData, function (err, info) {
-      if(err)
-        console.log(err)
-      else
-        console.log(info)
-    })
-    res.status(200).send('success')
+    const sendMessage = async ()=>{
+      await transporter.sendMail(mailData, function (err, info) {
+        if(err)
+          console.log(err)
+        else
+          res.status(200).send('success')
+          console.log(info)
+      })
+    }
+
+    sendMessage()
+
+
   }
