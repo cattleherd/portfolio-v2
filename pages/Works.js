@@ -86,6 +86,28 @@ const Works = () => (
             <Text>A catalogue of information of 600 pokemon</Text>
           </Box>
         </Box>
+        <Box className="workitem" w="250px" h="250px" mb="10%">
+          <Box>
+            <Transition>
+              <NextLink href="https://mikes-portfolio-git-master-cattleherd.vercel.app/">
+                <Image
+                  maxH={"150px"}
+                  w="100%"
+                  src="mike.PNG"
+                  alt="pokemon app"
+                  borderRadius="xl"
+                  _hover={{
+                    cursor: "pointer",
+                  }}
+                />
+              </NextLink>
+            </Transition>
+            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
+              Portfolio Site Commission
+            </Heading>
+            <Text>I was commissioned to make a portfolio website for a comedian.</Text>
+          </Box>
+        </Box>
       </div>
     </Center>
   </Box>
