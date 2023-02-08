@@ -94,6 +94,7 @@ const Works = () => (
                   maxH={"150px"}
                   w="100%"
                   src="mike.PNG"
+                  objectFit={'cover'}
                   alt="pokemon app"
                   borderRadius="xl"
                   _hover={{
@@ -103,7 +104,7 @@ const Works = () => (
               </NextLink>
             </Transition>
             <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Portfolio Site Commission
+              Website Commission
             </Heading>
             <Text>I was commissioned to make a portfolio website for a comedian.</Text>
           </Box>
