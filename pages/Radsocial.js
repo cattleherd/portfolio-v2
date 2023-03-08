@@ -6,7 +6,7 @@ import { useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function Radsocial() {
-  const bg = useColorModeValue("white", "blue");
+  const bg = useColorModeValue("aquamarine", "#004233");
 
   return (
     <div>
@@ -34,6 +34,7 @@ export default function Radsocial() {
                 position={"absolute"}
                 left="-20%"
                 top="30%"
+                color={useColorModeValue("#004233", "aquamarine")}
               >
                 RadSocial
               </Heading>
@@ -55,12 +56,28 @@ export default function Radsocial() {
               >
                 <p>
                   RadSocial is a social networking app that involves features
-                  like sharing posts, a feed of friend&apos;s posts (timeline), and a
-                  live messaging feature. The app is powered with react,
+                  like sharing posts, a feed of friend&apos;s posts (timeline),
+                  and a live messaging feature. The app is powered with react,
                   mongodb, expressjs and nodejs.
                 </p>
               </Box>
             </Box>
+          </Box>
+          <Box marginBottom={'120px'} height={"500px"} width="full">
+            <Center>
+              <Heading as="h4" pb="20px" fontSize="30px">
+                UX Case Study
+              </Heading>
+            </Center>
+            <iframe
+              src="https://docs.google.com/presentation/d/e/2PACX-1vRrwwSdLNlm1tDMokEtG_KiRqDmhmnT_eabe1Ndy46CLKdtzjTj2FBPkTv4ydTGWp-OBdw6dJVmScAI/embed?start=false&loop=false&delayms=3000"
+              frameborder="0"
+              width="100%"
+              height="100%"
+              allowfullscreen="true"
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+            ></iframe>
           </Box>
           <Box>
             <Box pt={"10px"} marginX="5%">
@@ -78,7 +95,13 @@ export default function Radsocial() {
             </Box>
             <NextLink href="https://rad-social.herokuapp.com" passHref>
               <Center>
-                <Button mt={"40px"} mb={"40px"} w="150px">
+                <Button
+                  bg={useColorModeValue("aquamarine", "#004233")}
+                  color={useColorModeValue("#004233", "aquamarine")}
+                  mt={"40px"}
+                  mb={"40px"}
+                  w="150px"
+                >
                   Demo
                 </Button>
               </Center>
