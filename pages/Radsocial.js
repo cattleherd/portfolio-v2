@@ -88,7 +88,7 @@ export default function Radsocial() {
               </Center>
               <video controls>
                 <source
-                  src="https://res.cloudinary.com/cattleherd/video/upload/v1674436854/radportfolioassets/radsocial_nvkfym.mp4"
+                  src="https://res.cloudinary.com/cattleherd/video/upload/v1679495269/radportfolioassets/2023-03-22_10-13-26_l3m070.mp4"
                   type="video/mp4"
                 />
               </video>
