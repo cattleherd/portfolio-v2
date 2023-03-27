@@ -55,10 +55,7 @@ export default function Radsocial() {
                 textAlign={"left"}
               >
                 <p>
-                  RadSocial is a social networking app that involves features
-                  like sharing posts, a feed of friend&apos;s posts (timeline),
-                  and a live messaging feature. The app is powered with react,
-                  mongodb, expressjs and nodejs.
+                Radsocial is a social media platform built on the MERN stack that prioritizes user privacy. With Radsocial, you can log in and access your timeline, view and create posts, search for users, and chat with your friends on the messenger app, all while ensuring your personal information is secure. Follow these simple steps to start using Radsocial today and enjoy a more privacy-focused social media experience.
                 </p>
               </Box>
             </Box>
@@ -88,7 +85,7 @@ export default function Radsocial() {
               </Center>
               <video controls>
                 <source
-                  src="https://res.cloudinary.com/cattleherd/video/upload/v1679495269/radportfolioassets/2023-03-22_10-13-26_l3m070.mp4"
+                  src="https://res.cloudinary.com/cattleherd/video/upload/v1679953025/radportfolioassets/Project_Name_1_bgt8ws.mp4"
                   type="video/mp4"
                 />
               </video>
