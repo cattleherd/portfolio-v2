@@ -1,7 +1,7 @@
 import { Box, Circle, Heading, Center, position } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import { Image, Button } from "@chakra-ui/react";
+import { Image, Button, Text } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -71,13 +71,19 @@ export default function Radsocial() {
                 />
               </video>
             </Box>
-            <NextLink href="https://immense-island-92357.herokuapp.com/" passHref>
+            <NextLink
+              href="https://immense-island-92357.herokuapp.com/"
+              passHref
+            >
               <Center>
-                <Button mt={"40px"} mb={"40px"} w="150px">
+                <Button mt={"40px"} mb={'20px'} w="150px">
                   Demo
                 </Button>
               </Center>
             </NextLink>
+            <Center>
+              <Text>(Demo takes a few moments to load)</Text>
+            </Center>
           </Box>
         </Box>
       </Center>

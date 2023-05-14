@@ -1,7 +1,7 @@
 import { Box, Circle, Heading, Center, position } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
-import { Image, Button } from "@chakra-ui/react";
+import { Image, Button, Text } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -55,12 +55,18 @@ export default function Radsocial() {
                 textAlign={"left"}
               >
                 <p>
-                Radsocial is a social media platform built on the MERN stack that prioritizes user privacy. With Radsocial, you can log in and access your timeline, view and create posts, search for users, and chat with your friends on the messenger app, all while ensuring your personal information is secure. Follow these simple steps to start using Radsocial today and enjoy a more privacy-focused social media experience.
+                  Radsocial is a social media platform built on the MERN stack
+                  that prioritizes user privacy. With Radsocial, you can log in
+                  and access your timeline, view and create posts, search for
+                  users, and chat with your friends on the messenger app, all
+                  while ensuring your personal information is secure. Follow
+                  these simple steps to start using Radsocial today and enjoy a
+                  more privacy-focused social media experience. <i>I designed this web app with a mobile first approach, the experience is best viewed on mobile devices.</i>
                 </p>
               </Box>
             </Box>
           </Box>
-          <Box marginBottom={'120px'} height={"500px"} width="full">
+          <Box marginBottom={"120px"} height={"500px"} width="full">
             <Center>
               <Heading as="h4" pb="20px" fontSize="30px">
                 UX Case Study
@@ -103,6 +109,9 @@ export default function Radsocial() {
                 </Button>
               </Center>
             </NextLink>
+            <Center>
+              <Text>(Demo takes a few seconds to load...)</Text>
+            </Center>
           </Box>
         </Box>
       </Center>
