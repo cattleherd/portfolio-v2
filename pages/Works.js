@@ -89,13 +89,13 @@ const Works = () => (
         <Box className="workitem" w="250px" h="250px" mb="10%">
           <Box>
             <Transition>
-              <NextLink href="https://mikes-portfolio-git-master-cattleherd.vercel.app/">
+              <NextLink href="https://michaelkmcauley.com/">
                 <Image
                   maxH={"150px"}
                   w="100%"
                   src="mike.PNG"
                   objectFit={'cover'}
-                  alt="pokemon app"
+                  alt="website commision"
                   borderRadius="xl"
                   _hover={{
                     cursor: "pointer",
@@ -107,6 +107,29 @@ const Works = () => (
               Website Commission
             </Heading>
             <Text>I was commissioned to make a portfolio website for a comedian.</Text>
+          </Box>
+        </Box>
+        <Box className="workitem" w="250px" h="250px" mb="10%">
+          <Box>
+            <Transition>
+              <NextLink href="https://chatbot-7uwouxqg1-cattleherd.vercel.app/">
+                <Image
+                  maxH={"150px"}
+                  w="100%"
+                  src="chatbot.JPG"
+                  objectFit={'cover'}
+                  alt="ai chatbot"
+                  borderRadius="xl"
+                  _hover={{
+                    cursor: "pointer",
+                  }}
+                />
+              </NextLink>
+            </Transition>
+            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
+              Simple AI chatbot
+            </Heading>
+            <Text>I made a simple friendly chat bot using openai API and langchain</Text>
           </Box>
         </Box>
       </div>
