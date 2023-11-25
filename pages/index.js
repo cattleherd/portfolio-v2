@@ -71,7 +71,7 @@ export default function Home() {
           overflow="hidden"
         >
           <ProfileImage
-            src="/profile.png"
+            src="/Pinpoint_LT_9594.jpg"
             alt="Profile image"
             borderRadius="full"
             width="100%"
