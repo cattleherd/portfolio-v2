@@ -91,8 +91,7 @@ export default function Home() {
         textAlign="left"
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}>
-          I am naturally curious and enjoy challenges that help me learn and grow. I am passionate about web development and try my best to stay current despite the ever changing dynamic of web technologies.
-          In my free time I like to listen to audiobooks, explore new hiking trails, or visiting cafe&apos;s in order to perfect my craft in web development. 
+          Hello, I'm Radwan Ahmed, a third-year Computer Science student at Thompson Rivers University. My passion lies in full-stack development, where I excel in creating seamless digital solutions. I am deeply fascinated by the intersection of design, technology, and AI, and love building experiences that resonate with users. I specialize in creating comprehensive solutions from wireframes to fully-functional applications. My journey is fueled by a continuous exploration of AI advancements and web development trends, my aim is to continuiously innovate and make impactful and meaningful contributions.
         </Box>
       </Box>
       <Transition>
