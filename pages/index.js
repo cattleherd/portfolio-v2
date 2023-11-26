@@ -39,7 +39,23 @@ export default function Home() {
           </Suspense>
         </Canvas>
       </Box>
+<<<<<<< HEAD
       <Center display="flex" justifyContent={"space-between"}  flexDirection={{ base: "column", sm: "row" }}>
+=======
+      <Box
+        borderRadius="lg"
+        mb={6}
+        mt={10}
+        mx={"auto"}
+        p={4}
+        textAlign="center"
+        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+        css={{ backdropFilter: "blur(10px)" }}
+         <Text fontSize={'lg'}>Hello, I&apos;m a web developer from Toronto Canada.</Text>
+      >
+      </Box>
+      <Center display="flex" flexDirection={{ base: "column", sm: "row" }}>
+>>>>>>> 3ae8b4557fdf36069b59fe0e0b9b25d4c3818285
         <Box>
           <Heading as="h2" variant="page-title">
             Radwan Ahmed
@@ -65,6 +81,7 @@ export default function Home() {
             width="100%"
             objectFit={"cover"}
             height="100%"
+            objectFit={"cover"}
           />
         </Box>
       </Center>
