@@ -39,19 +39,7 @@ export default function Home() {
           </Suspense>
         </Canvas>
       </Box>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        mt={10}
-        mx={"auto"}
-        p={4}
-        textAlign="center"
-        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-        css={{ backdropFilter: "blur(10px)" }}
-      >
-         <Text fontSize={'lg'}>Hello, I&apos;m a web developer from Toronto Canada.</Text>
-      </Box>
-      <Center display="flex" flexDirection={{ base: "column", sm: "row" }}>
+      <Center display="flex" justifyContent={"space-between"}  flexDirection={{ base: "column", sm: "row" }}>
         <Box>
           <Heading as="h2" variant="page-title">
             Radwan Ahmed
@@ -75,6 +63,7 @@ export default function Home() {
             alt="Profile image"
             borderRadius="full"
             width="100%"
+            objectFit={"cover"}
             height="100%"
           />
         </Box>
@@ -91,8 +80,9 @@ export default function Home() {
         textAlign="left"
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}>
+                <Text fontSize={'lg'}>Hello, I am Radwan Ahmed, a third year Computer Science student at Thompson Rivers University. My passion lies in full stack development, where I excel in creating seamless digital solutions. I am deeply fascinated by the intersection of design, technology, and AI, and love building experiences that resonate with users. I specialize in creating comprehensive solutions from wireframes to fully-functional applications. My journey is fueled by a continuous exploration of AI advancements and web development trends, my aim is to continuiously innovate and make impactful and meaningful contributions.</Text>
+    
         </Box>
-          Hello, I am Radwan Ahmed, a third year Computer Science student at Thompson Rivers University. My passion lies in full stack development, where I excel in creating seamless digital solutions. I am deeply fascinated by the intersection of design, technology, and AI, and love building experiences that resonate with users. I specialize in creating comprehensive solutions from wireframes to fully-functional applications. My journey is fueled by a continuous exploration of AI advancements and web development trends, my aim is to continuiously innovate and make impactful and meaningful contributions.
       </Box>
       <Transition>
         <NextLink href="/Works" passHref>
