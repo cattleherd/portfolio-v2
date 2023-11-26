@@ -48,8 +48,8 @@ export default function Home() {
         textAlign="center"
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
-      >
          <Text fontSize={'lg'}>Hello, I&apos;m a web developer from Toronto Canada.</Text>
+      >
       </Box>
       <Center display="flex" flexDirection={{ base: "column", sm: "row" }}>
         <Box>
@@ -76,6 +76,7 @@ export default function Home() {
             borderRadius="full"
             width="100%"
             height="100%"
+            objectFit={"cover"}
           />
         </Box>
       </Center>
