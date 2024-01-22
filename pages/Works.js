@@ -64,14 +64,14 @@ const Works = () => (
             </Text>
           </Box>
         </Box>
-        <Box className="workitem" w="250px" h="250px" mb="10%">
+                <Box className="workitem" w="250px" h="250px" mb="10%">
           <Box>
             <Transition>
-              <NextLink href="/Pokedex">
+              <NextLink href="https://stopwatch-aymglkxsw-cattleherd.vercel.app/">
                 <Image
                   maxH={"150px"}
                   w="100%"
-                  src="pokedex.PNG"
+                  src="stopwatch.jpg"
                   alt="pokemon app"
                   borderRadius="xl"
                   _hover={{
@@ -81,9 +81,9 @@ const Works = () => (
               </NextLink>
             </Transition>
             <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Pokedex
+              Stopwatch Timer
             </Heading>
-            <Text>A catalogue of information of 600 pokemon</Text>
+            <Text>A Fully functional Stopwatch Timer</Text>
           </Box>
         </Box>
         <Box className="workitem" w="250px" h="250px" mb="10%">
