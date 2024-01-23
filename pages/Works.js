@@ -71,7 +71,7 @@ const Works = () => (
                 <Image
                   maxH={"150px"}
                   w="100%"
-                  src="stopwatch.jpg"
+                  src="stopwatch.JPG"
                   alt="pokemon app"
                   borderRadius="xl"
                   _hover={{
