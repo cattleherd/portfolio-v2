@@ -72,6 +72,7 @@ const Works = () => (
                   maxH={"150px"}
                   w="100%"
                   src="stopwatch.JPG"
+                  object-fit="cover"
                   alt="pokemon app"
                   borderRadius="xl"
                   _hover={{
