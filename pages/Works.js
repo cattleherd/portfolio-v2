@@ -67,7 +67,7 @@ const Works = () => (
                 <Box className="workitem" w="250px" h="250px" mb="10%">
           <Box>
             <Transition>
-              <NextLink href="https://stopwatch-aymglkxsw-cattleherd.vercel.app/">
+              <NextLink href="https://stopwatch-eight-lovat.vercel.app/">
                 <Image
                   maxH={"150px"}
                   w="100%"
