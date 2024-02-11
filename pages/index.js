@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import { motion } from "framer-motion";
 import Transition from "../components/transition";
+import Splashscreen from "../components/Splashscreen.client.js"
 
 import {
   Box,
@@ -24,6 +25,8 @@ const ProfileImage = chakra(Image, {
 
 export default function Home() {
   return (
+    <>
+    <Splashscreen/>
     <Container>
       <Box
         height={"400px"}
@@ -94,5 +97,6 @@ export default function Home() {
         </NextLink>
       </Transition>
     </Container>
+    </>
   );
 }
