@@ -1,7 +1,6 @@
 import NextLink from "next/link";
-import { motion } from "framer-motion";
 import Transition from "../components/transition";
-import Splashscreen from "../components/Splashscreen.client.js"
+import Splashscreen from "../components/Splashscreen.client"
 
 import {
   Box,
@@ -12,21 +11,25 @@ import {
   Image,
   Center,
   Button,
-  shouldForwardProp,Text
+  Text
 } from "@chakra-ui/react";
-import Layout from "../components/layout";
 import { Model } from "../components/model";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { Suspense,useState } from "react";
+import { useSplashScreen } from "../context/SplashScreenContext";
+
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
+
 export default function Home() {
+  const { showSplashScreen, setShowSplashScreen } = useSplashScreen(); //global context for loading screen
   return (
     <>
-    <Splashscreen/>
+      {/*onshown passed to splashscreen component to trigger global context which tracks whether loading screen has loaded once per session. */}
+      {showSplashScreen && <Splashscreen onShown={() => setShowSplashScreen(false)} />} 
     <Container>
       <Box
         height={"400px"}

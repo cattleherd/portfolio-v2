@@ -16,6 +16,12 @@
     pointer-events: none;
 }
 
+.splash__screen.invisible{
+    display: hidden;
+}
+
+
+
 .left{
     position: absolute;
     left: 0;
