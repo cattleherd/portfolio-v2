@@ -3,7 +3,6 @@ import theme from "../lib/theme"; //custom theme
 import Layout from "../components/layout.js"; //boilerplate code for all pages (navbar, footer, etc)
 import Transition from "../components/transition";
 import '../styles/transition.css'
-import '../styles/works.css'
 import '../styles/global.css'
 import { SplashScreenProvider } from "../context/SplashScreenContext.js";
 

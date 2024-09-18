@@ -1,177 +1,120 @@
-import {
-  Container,
-  Heading,
-  Box,
-  Image,
-  Center,
-  Wrap,
-  Text,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Container, Heading, Box, Image, Text, Flex } from "@chakra-ui/react";
 import Transition from "../components/transition";
 import NextLink from "next/link";
 
-const Works = () => (
-  <Box w="60%" marginX={"auto"} mb="10%">
-    <Heading as="h3" size={"lg"} variant="page-title">
-      Web Development
+const WorkItem = ({ href, imageSrc, imageAlt, title, description }) => (
+  <Box
+    className="workitem"
+    width={{ base: "90%", md: "250px" }}
+    mb={{ base: 8, md: 10 }}
+    mx="5%"
+    transition="transform 0.3s"
+    _hover={{ transform: "scale(1.05)" }}
+  >
+    <Transition>
+      <NextLink href={href} passHref>
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          borderRadius="xl"
+          objectFit="cover"
+          w="100%"
+          h={{ base: "200px", md: "150px" }}
+          _hover={{
+            cursor: "pointer",
+          }}
+        />
+      </NextLink>
+    </Transition>
+    <Heading size="md" mt={4} mb={2} textAlign="center">
+      {title}
     </Heading>
-    <Center>
-      <div className="works">
-        <Box className="workitem" width="250px" h="250px">
-          <Box>
-            <Transition>
-              <NextLink href="/Radsocial" passHref>
-                <Image
-                  minH={"150px"}
-                  src="radsocial.png"
-                  alt="social media app"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mt={"15px"} mb={"15px"} textAlign="center">
-              RadSocial
-            </Heading>
-            <Text display={"flex"} justifyContent={"center"}>
-              A social media web application.
-            </Text>
-          </Box>
-        </Box>
-        <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Transition>
-              <NextLink href="/RadCamp">
-                <Image
-                  minH={"150px"}
-                  src="campground.PNG"
-                  alt="campground app"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mt={"15px"} mb={"15px"} textAlign="center">
-              Radcamp
-            </Heading>
-            <Text display={"flex"} justifyContent={"center"}>
-              A Campgrounds and trails review app
-            </Text>
-          </Box>
-        </Box>
-                <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Transition>
-              <NextLink href="https://stopwatch-eight-lovat.vercel.app/">
-                <Image
-                  maxH={"150px"}
-                  w="100%"
-                  src="stopwatch.JPG"
-                  object-fit="cover"
-                  alt="pokemon app"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Stopwatch Timer
-            </Heading>
-            <Text>A Fully functional Stopwatch Timer</Text>
-          </Box>
-        </Box>
-        <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Transition>
-              <NextLink href="https://mikes-portfolio-git-master-cattleherd.vercel.app/">
-                <Image
-                  maxH={"150px"}
-                  w="100%"
-                  src="mike.PNG"
-                  objectFit={"cover"}
-                  alt="website commision"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Website Commission
-            </Heading>
-            <Text>
-              I was commissioned to make a portfolio website for a comedian.
-            </Text>
-          </Box>
-        </Box>
-        <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Transition>
-              <NextLink href="https://chatbot-k772cyk3d-cattleherd.vercel.app/">
-                <Image
-                  maxH={"150px"}
-                  w="100%"
-                  src="chatbot.JPG"
-                  objectFit={"cover"}
-                  alt="ai chatbot"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Simple AI chatbot
-            </Heading>
-            <Text>
-              I made a simple friendly chat bot using openai API and langchain
-            </Text>
-          </Box>
-        </Box>
-      </div>
-    </Center>
-    <Heading as="h3" size={"lg"} mt='10%' variant="page-title">
-      Machine Learning
-    </Heading>
-    <Center>
-      <div className="works">
-        <Box className="workitem" w="250px" h="250px" mb="10%">
-          <Box>
-            <Transition>
-              <NextLink href="https://huggingface.co/spaces/cattleherd/deadornot">
-                <Image
-                  maxH={"150px"}
-                  w="100%"
-                  src="deadornot.JPG"
-                  objectFit={"cover"}
-                  alt="ai chatbot"
-                  borderRadius="xl"
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                />
-              </NextLink>
-            </Transition>
-            <Heading size={"md"} mb={"15px"} mt={"15px"} textAlign="center">
-              Plant health tool
-            </Heading>
-            <Text>
-              I made a simple deep learning model trained from 80 images to distinguish between a dead plant or healthy plant
-            </Text>
-          </Box>
-        </Box>
-      </div>
-    </Center>
+    <Text textAlign="center">{description}</Text>
   </Box>
 );
+
+const WorksSection = ({ title, items }) => (
+  <Box mt={10}>
+    <Heading as="h3" size="lg" mb={8}>
+      {title}
+    </Heading>
+    <Flex
+      className="works"
+      flexDirection={{ base: "column", md: "row" }}
+      flexWrap="wrap"
+      justifyContent={{ base: "flex-start", md: "center" }}
+      alignItems="center"
+    >
+      {items.map((item, index) => (
+        <WorkItem key={index} {...item} />
+      ))}
+    </Flex>
+  </Box>
+);
+
+const Works = () => {
+  const webDevelopmentItems = [
+    {
+      href: "/Afkaa",
+      imageSrc: "afkaa.png",
+      imageAlt: "Somali language learning app",
+      title: "Afkaa",
+      description: "An interactive and gamified way to learn Somali",
+    },
+    {
+      href: "/Radsocial",
+      imageSrc: "radsocial.png",
+      imageAlt: "social media app",
+      title: "RadSocial",
+      description: "A social media web application",
+    },
+    {
+      href: "/RadCamp",
+      imageSrc: "campground.PNG",
+      imageAlt: "campground app",
+      title: "Radcamp",
+      description: "A Campgrounds and trails review app",
+    },
+    {
+      href: "https://stopwatch-eight-lovat.vercel.app/",
+      imageSrc: "stopwatch.JPG",
+      imageAlt: "stopwatch app",
+      title: "Stopwatch Timer",
+      description: "A Fully functional Stopwatch Timer",
+    },
+    {
+      href: "https://mikes-portfolio-git-master-cattleherd.vercel.app/",
+      imageSrc: "mike.PNG",
+      imageAlt: "website commission",
+      title: "Website Commission",
+      description: "A portfolio website commissioned for a comedian",
+    },
+    {
+      href: "https://chatbot-k772cyk3d-cattleherd.vercel.app/",
+      imageSrc: "chatbot.JPG",
+      imageAlt: "ai chatbot",
+      title: "Simple AI Chatbot",
+      description: "A friendly chat bot using OpenAI API and LangChain",
+    },
+  ];
+
+  const machineLearningItems = [
+    {
+      href: "https://huggingface.co/spaces/cattleherd/deadornot",
+      imageSrc: "deadornot.JPG",
+      imageAlt: "ai chatbot",
+      title: "Plant health tool",
+      description:
+        "A simple deep learning model to distinguish between dead and healthy plants",
+    },
+  ];
+
+  return (
+    <Container maxW="container.xl" py={10}>
+      <WorksSection title="Web Development" items={webDevelopmentItems} />
+      <WorksSection title="Machine Learning" items={machineLearningItems} />
+    </Container>
+  );
+};
 
 export default Works;
