@@ -23,7 +23,6 @@ const ContactForm = () => {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(res);
       if (res.status === 200) {
         alert("Email has been sent!");
         setSubmitted(true);
