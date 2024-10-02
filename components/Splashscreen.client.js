@@ -62,7 +62,7 @@ export default function SplashScreen() {
     };
 
     loadingFunction(); 
-  }, []); 
+  }, [hideSplashScreen]); 
 
   // Render the splash screen elements
   return (
