@@ -109,8 +109,11 @@ const Body = () => {
       <Alert status="info" variant="subtle" rounded="md">
         <AlertIcon />
         <Text>
-          Afkaa is currently under development, so please that
-          many features may not yet function as intended.
+          Afkaa is currently under development, so please note that many
+          features may not yet function as intended. While this app is designed
+          to be a mobile application, it is currently presented in a browser
+          format for demonstration purposes. For the best experience, please
+          view it on a phone.
         </Text>
       </Alert>
 
