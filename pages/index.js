@@ -76,9 +76,9 @@ const Bio = () => (
     </Heading>
     <Text fontSize="md" lineHeight="tall">
       {/* Bio content */}
-      Hello, I&aposm Radwan Ahmed, a 4th-year Computer Science student at Thompson
+      Hello, I'm Radwan Ahmed, a 4th-year Computer Science student at Thompson
       Rivers University. My passion lies in full-stack development, where I
-      excel in creating seamless digital solutions. I&aposm fascinated by the
+      excel in creating seamless digital solutions. I'm fascinated by the
       intersection of design and technology, and I love building experiences
       that resonate with users. From wireframes to fully-functional
       applications, I specialize in creating comprehensive solutions. Driven by
