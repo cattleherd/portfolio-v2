@@ -109,7 +109,7 @@ const Body = () => {
       <Alert status="info" variant="subtle" rounded="md">
         <AlertIcon />
         <Text>
-          Afkaa is currently under development,so please note please note that
+          Afkaa is currently under development, so please that
           many features may not yet function as intended.
         </Text>
       </Alert>
