@@ -48,12 +48,12 @@ const ProfileImage = chakra(Image, {
 
 // Component for rendering social media icons with links
 const SocialIcon = ({ icon, href }) => (
-  <NextLink href={href} passHref> 
+  <NextLink href={href} passHref>
     {/* NextLink for client-side navigation */}
     <Icon
       as={icon} // The specific icon component (e.g., FaGithub)
-      w={6}      // Width
-      h={6}      // Height
+      w={6} // Width
+      h={6} // Height
       _hover={{ color: "teal.500", transform: "scale(1.1)" }} // Hover styles
       transition="all 0.3s" // Smooth transition on hover
     />
@@ -69,16 +69,16 @@ const Bio = () => (
     boxShadow="lg"
     css={{ backdropFilter: "blur(10px)" }} // Apply backdrop blur effect
     width={{ base: "90%", md: "70%", lg: "60%" }} // Responsive width
-    height={{ base: "100%", md: "80%" }}        // Responsive height
+    height={{ base: "100%", md: "80%" }} // Responsive height
   >
     <Heading as="h3" size="lg" mb={4}>
       About Me
     </Heading>
     <Text fontSize="md" lineHeight="tall">
       {/* Bio content */}
-      Hello, I&aposm Radwan Ahmed, a 4th-year Computer Science student at Thompson
+      Hello, I am Radwan Ahmed, a 4th-year Computer Science student at Thompson
       Rivers University. My passion lies in full-stack development, where I
-      excel in creating seamless digital solutions. I&aposm fascinated by the
+      excel in creating seamless digital solutions. I am fascinated by the
       intersection of design and technology, and I love building experiences
       that resonate with users. From wireframes to fully-functional
       applications, I specialize in creating comprehensive solutions. Driven by
@@ -91,14 +91,16 @@ const Bio = () => (
 
 // Button component for navigating to the portfolio page
 const PortfolioButton = () => (
-  <Transition> {/* Wrap the button in a Transition component for animation */}
+  <Transition>
+    {" "}
+    {/* Wrap the button in a Transition component for animation */}
     <NextLink href="/Works" passHref>
       <Button
         colorScheme="teal"
         size="lg"
         mt={8}
         _hover={{ transform: "translateY(-2px)", boxShadow: "lg" }} // Hover styles
-        transition="all 0.3s" 
+        transition="all 0.3s"
       >
         View My Portfolio
       </Button>
@@ -113,7 +115,8 @@ export default function Home() {
 
   return (
     <Container maxW="container.xl" py={10} mb={"10%"}>
-      {showSplashScreen && <Splashscreen />} {/* Conditionally render the splash screen */}
+      {showSplashScreen && <Splashscreen />}{" "}
+      {/* Conditionally render the splash screen */}
       <Flex
         direction={{ base: "column", md: "row" }} // Responsive layout direction
         align="center"
@@ -153,14 +156,15 @@ export default function Home() {
             mb={{ base: 10, md: 0 }}
           >
             <Canvas>
-              <Suspense fallback={null}> {/* Suspense for lazy loading the model */}
+              <Suspense fallback={null}>
+                {" "}
+                {/* Suspense for lazy loading the model */}
                 <Model />
               </Suspense>
             </Canvas>
           </Box>
         )}
       </Flex>
-
       {/* Section with a parallax image */}
       <Flex mt={16} justifyContent="center">
         <Box
@@ -171,7 +175,9 @@ export default function Home() {
           width={{ base: "100%", md: "70%", lg: "60%" }}
         >
           <AspectRatio ratio={16 / 9}>
-            <Parallax translateY={["-20%", "20%"]}> {/* Parallax effect on vertical scroll */}
+            <Parallax translateY={["-20%", "20%"]}>
+              {" "}
+              {/* Parallax effect on vertical scroll */}
               <Box width="100%" height="120%" position="absolute" top="-10%">
                 <Image
                   src="/Pinpoint_LT_9594.jpg"
@@ -185,7 +191,6 @@ export default function Home() {
           </AspectRatio>
         </Box>
       </Flex>
-
       {/* Bio section */}
       <Flex mt={16} justifyContent="center">
         <Bio />
