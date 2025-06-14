@@ -20,23 +20,23 @@ const Header = () => {
     <VStack mb={10}>
       <Box
         id="logo"
-        maxWidth="200px"
-        minWidth="200px"
-        height="200px"
+        maxW="200px"
+        minW="200px"
+        h="200px"
         textAlign="center"
         mr={{ base: 0, md: 8 }}
         mb={{ base: 4, md: 0 }}
       >
-        <Heading as="h1" fontSize="35px" mt={2} mb={4}>
+        <Heading as="h1" fontSize={{ base: "2xl", md: "3xl" }} mt={2} mb={4}>
           Afkaa
         </Heading>
         <Image
           src="./afkaa.png"
-          height="120px"
-          width="120px"
+          h="120px"
+          w="120px"
           alt="Afkaa logo"
-          margin="0 auto"
-          rounded={"20px"}
+          mx="auto"
+          rounded="20px"
         />
       </Box>
       <Box
@@ -44,20 +44,16 @@ const Header = () => {
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
         rounded="xl"
-        flex={1}
+        w="100%"
       >
-        <Text>
-          I am developing Afkaa as a gamified educational app designed to help
-          high school students in Somaliland prepare for the IELTS
-          (International English Language Testing System) exam. My hope is to
-          bridge the gap between local education and international opportunities
-          by providing targeted English language practice for somali youth.
-          Through interactive exercises, mock tests, and personalized feedback,
-          Afkaa can hopefully equip students with the skills and confidence
-          needed to excel in the IELTS, opening doors to international schools
-          and universities. By focusing on this crucial aspect of academic
-          advancement, Afkaa plays a vital role in empowering Somaliland&aposs
-          youth to pursue global educational opportunities.
+        <Text
+          fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
+          lineHeight={{ base: "tall", md: "2xl" }}
+        >
+          Afkaa is a gamified language app built to help Somali youth in the
+          diaspora to connect with their roots by learning and practicing Somali.
+          With interactive lessons, quizzes, and listening exercises, Afkaa
+          aims to make language learning fun!
         </Text>
       </Box>
     </VStack>
@@ -67,7 +63,7 @@ const Header = () => {
 const Body = () => {
   return (
     <VStack spacing={6} align="stretch" mb={8}>
-      <Box mb={4}>
+      <Box>
         <Heading as="h3" size="md" mb={4}>
           Key Features
         </Heading>
@@ -77,59 +73,88 @@ const Body = () => {
           rounded="lg"
           shadow="md"
         >
-          <Text>• Interactive vocabulary quizzes</Text>
-          <Text>• Audio pronunciation guides</Text>
-          <Text>• Progress tracking and gamification elements</Text>
-          <Text>• Responsive design for mobile and desktop use</Text>
-          <Text>• User authentication and profile management</Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Interactive Somali vocabulary quizzes</Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Audio pronunciation</Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Grammar mini-lessons with examples</Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Progress tracking & gamification</Text>
         </Box>
       </Box>
+
       <Box>
         <Heading as="h3" size="md" mb={4}>
-          Future Plans
+          Current Plans
         </Heading>
         <Box
           p={4}
-          bg={useColorModeValue("yellow.100", "black")}
+          bg={useColorModeValue("yellow.100", "yellow.900")}
           rounded="lg"
           shadow="md"
         >
-          <Text>
-            Future plans for Afkaa include expanding its scope to help youth in
-            Canada learn Somali as well, with the aim of preserving cultural
-            heritage. This initiative will enable young Somali-Canadians to
-            connect with their roots, strengthen their cultural identity, and
-            maintain linguistic ties to their heritage. By offering a platform
-            for Somali language learning, Afkaa seeks to bridge generational
-            gaps and foster a sense of community among the Somali diaspora in
-            Canada.
+          <Text
+            fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
+            lineHeight={{ base: "tall", md: "2xl" }}
+          >
+            We’re piloting Afkaa with Somali youth in Toronto to collect
+            feedback on our core modules. Next steps include refining our UI/UX
+            based on real user data, expanding lesson sets, and preparing for a
+            public launch by Q4!
           </Text>
         </Box>
       </Box>
+
       <Alert status="info" variant="subtle" rounded="md">
         <AlertIcon />
-        <Text>
-          Afkaa is currently under development, so please note that many
-          features may not yet function as intended. While this app is designed
-          to be a mobile application, it is currently presented in a browser
-          format for demonstration purposes. For the best experience, please
-          view it on a phone.
+        <Text fontSize={{ base: "sm", md: "md", lg: "lg" }}>
+          Afkaa is under active development—some features are still WIP. For
+          the full experience, please use a mobile device.
         </Text>
       </Alert>
 
       <Box>
         <Heading as="h3" size="md" mb={4}>
+          UX Case Study
+        </Heading>
+        <Box
+          w="100%"
+          h="0"
+          pb="56.25%"
+          position="relative"
+          rounded="md"
+          overflow="hidden"
+          shadow="md"
+        >
+          <iframe
+            style={{
+              border: "1px solid rgba(0, 0, 0, 0.1)",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            src="https://embed.figma.com/deck/enWFhmQpSNKXoTYCvuqpj9/Untitled?node-id=11-68&embed-host=share"
+            allowFullScreen
+          />
+        </Box>
+      </Box>
+
+      <Box>
+        <Heading as="h3" size="md" mb={4}>
           Try Afkaa
         </Heading>
-        <Text mb={2}>
-          Experience Afkaa firsthand! Visit our live demo to explore the
-          features and start learning Somali today.
+        <Text
+          mb={2}
+          fontSize={{ base: "md", md: "lg", lg: "xl" }}
+          lineHeight={{ base: "tall", md: "2xl" }}
+        >
+          Experience Afkaa yourself!
         </Text>
         <Link
           href="https://afkaa.com"
           isExternal
           color="blue.500"
           fontWeight="bold"
+          fontSize={{ base: "md", md: "lg" }}
         >
           Visit Afkaa Demo <Icon as={ExternalLinkIcon} mx="2px" />
         </Link>
@@ -144,14 +169,15 @@ const Afkaa = () => {
       <Box w={{ base: "95%", sm: "80%", md: "60%" }} m="5%">
         <Header />
         <Body />
-        <Center>
+        <Center mt={6}>
           <Button
-            rightIcon={<Icon as={ExternalLinkIcon} />}
+            rightIcon={<ExternalLinkIcon />}
             colorScheme="blue"
             as="a"
             href="https://afkaa2-hjl4.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
+            fontSize={{ base: "md", md: "lg" }}
           >
             Launch Afkaa Demo
           </Button>

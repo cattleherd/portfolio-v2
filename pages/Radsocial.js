@@ -66,22 +66,6 @@ export default function Radsocial() {
               </Box>
             </Box>
           </Box>
-          <Box marginBottom={"120px"} height={"500px"} width="full">
-            <Center>
-              <Heading as="h4" pb="20px" fontSize="30px">
-                UX Case Study
-              </Heading>
-            </Center>
-            <iframe
-              src="https://docs.google.com/presentation/d/e/2PACX-1vRrwwSdLNlm1tDMokEtG_KiRqDmhmnT_eabe1Ndy46CLKdtzjTj2FBPkTv4ydTGWp-OBdw6dJVmScAI/embed?start=false&loop=false&delayms=3000"
-              frameborder="0"
-              width="100%"
-              height="100%"
-              allowfullscreen="true"
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-            ></iframe>
-          </Box>
           <Box>
             <Box pt={"10px"} marginX="5%">
               <Center>
