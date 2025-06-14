@@ -1,66 +1,74 @@
-import { Container, Heading, Box, Image, Text, Flex } from "@chakra-ui/react";
+import React from "react";
+import {
+  Container,
+  Heading,
+  Box,
+  Image,
+  Text,
+  Flex,
+  Grid,
+  GridItem,
+  VStack,
+  useColorModeValue,
+  Center,
+} from "@chakra-ui/react";
 import Transition from "../components/transition";
 import NextLink from "next/link";
 
-const WorkItem = ({ href, imageSrc, imageAlt, title, description }) => (
-  <Box
-    className="workitem"
-    width={{ base: "90%", md: "250px" }}
-    mb={{ base: 8, md: 10 }}
-    mx="5%"
-    transition="transform 0.3s"
-    _hover={{ transform: "scale(1.05)" }}
-  >
-    <Transition>
-      <NextLink href={href} passHref>
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          borderRadius="xl"
-          objectFit="cover"
-          w="100%"
-          h={{ base: "200px", md: "150px" }}
-          _hover={{
-            cursor: "pointer",
-          }}
-        />
-      </NextLink>
-    </Transition>
-    <Heading size="md" mt={4} mb={2} textAlign="center">
-      {title}
-    </Heading>
-    <Text textAlign="center">{description}</Text>
-  </Box>
-);
+const WorkItem = ({ href, imageSrc, imageAlt, title, description, size }) => {
+  // size = "featured" | "tile"
+  const isFeatured = size === "featured";
 
-const WorksSection = ({ title, items }) => (
-  <Box mt={10}>
-    <Heading as="h3" size="lg" mb={8}>
-      {title}
-    </Heading>
-    <Flex
-      className="works"
-      flexDirection={{ base: "column", md: "row" }}
-      flexWrap="wrap"
-      justifyContent={{ base: "flex-start", md: "center" }}
-      alignItems="center"
+  return (
+    <Box
+      maxW={isFeatured ? "40%" : "250px"}
+      w="100%"
+      mb={8}
+      mx={isFeatured ? 0 : "auto"}
+      transition="transform 0.3s"
+      _hover={{ transform: "scale(1.05)" }}
     >
-      {items.map((item, index) => (
-        <WorkItem key={index} {...item} />
-      ))}
-    </Flex>
-  </Box>
-);
+      <Transition>
+        <NextLink href={href} passHref>
+          <Box
+            as="a"
+            display="block"
+            pos="relative"
+            overflow="hidden"
+            borderRadius="xl"
+          >
+            <Image
+              src={imageSrc}
+              alt={imageAlt}
+              objectFit="cover"
+              w="100%"
+              h={isFeatured ? { base: "200px", md: "400px" } : "150px"}
+            />
+          </Box>
+        </NextLink>
+      </Transition>
+      <VStack spacing={2} mt={4} textAlign={isFeatured ? "left" : "center"}>
+        <Heading size={isFeatured ? "xl" : "md"}>{title}</Heading>
+        <Text fontSize={isFeatured ? "lg" : "sm"} color="gray.500">
+          {description}
+        </Text>
+      </VStack>
+    </Box>
+  );
+};
 
 const Works = () => {
-  const webDevelopmentItems = [
-    {
-      href: "/Afkaa",
-      imageSrc: "afkaa.png",
-      imageAlt: "Somali language learning app",
-      title: "Afkaa",
-      description: "An interactive and gamified way to learn Somali",
-    },
+  // Featured project
+  const featured = {
+    href: "/Afkaa",
+    imageSrc: "afkaa.png",
+    imageAlt: "Somali language learning app",
+    title: "Afkaa",
+    description: "An interactive and gamified way to learn Somali",
+  };
+
+  // Past works
+  const pastWorks = [
     {
       href: "/Radsocial",
       imageSrc: "radsocial.png",
@@ -96,23 +104,50 @@ const Works = () => {
       title: "Simple AI Chatbot",
       description: "A friendly chat bot using OpenAI API and LangChain",
     },
-  ];
-
-  const machineLearningItems = [
     {
       href: "https://huggingface.co/spaces/cattleherd/deadornot",
       imageSrc: "deadornot.JPG",
-      imageAlt: "ai chatbot",
-      title: "Plant health tool",
+      imageAlt: "plant health tool",
+      title: "Plant Health Tool",
       description:
-        "A simple deep learning model to distinguish between dead and healthy plants",
+        "A simple deep-learning model to distinguish between dead and healthy plants",
     },
   ];
 
   return (
     <Container maxW="container.xl" py={10}>
-      <WorksSection title="Web Development" items={webDevelopmentItems} />
-      <WorksSection title="Machine Learning" items={machineLearningItems} />
+      {/* Featured */}
+      <Box mb={12}>
+        <Heading as="h3" size="lg" mb={6}>
+          Featured Project
+        </Heading>
+        <Center>
+          {" "}
+          <WorkItem {...featured} size="featured" />
+        </Center>
+      </Box>
+
+      {/* Past Works */}
+      <Box>
+        <Heading as="h3" size="lg" mb={6}>
+          Past Works
+        </Heading>
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+          }}
+          gap={8}
+          justifyItems="center"
+        >
+          {pastWorks.map((item, idx) => (
+            <GridItem key={idx}>
+              <WorkItem {...item} size="tile" />
+            </GridItem>
+          ))}
+        </Grid>
+      </Box>
     </Container>
   );
 };
