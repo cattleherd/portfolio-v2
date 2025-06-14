@@ -94,10 +94,10 @@ const Body = () => {
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
             lineHeight={{ base: "tall", md: "2xl" }}
           >
-            We’re piloting Afkaa with Somali youth in Toronto to collect
+            We’re piloting Afkaa as a web demo with Somali youth in Toronto to collect
             feedback on our core modules. Next steps include refining our UI/UX
             based on real user data, expanding lesson sets, and preparing for a
-            public launch by Q4!
+            mobile app public launch by Q4!
           </Text>
         </Box>
       </Box>
