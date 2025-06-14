@@ -73,10 +73,18 @@ const Body = () => {
           rounded="lg"
           shadow="md"
         >
-          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Interactive Somali vocabulary quizzes</Text>
-          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Audio pronunciation</Text>
-          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Grammar mini-lessons with examples</Text>
-          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>• Progress tracking & gamification</Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>
+            • Interactive Somali vocabulary quizzes
+          </Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>
+            • Audio pronunciation
+          </Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>
+            • Grammar mini-lessons with examples
+          </Text>
+          <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>
+            • Progress tracking & gamification
+          </Text>
         </Box>
       </Box>
 
@@ -94,10 +102,10 @@ const Body = () => {
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
             lineHeight={{ base: "tall", md: "2xl" }}
           >
-            We’re piloting Afkaa as a web demo with Somali youth in Toronto to collect
-            feedback on our core modules. Next steps include refining our UI/UX
-            based on real user data, expanding lesson sets, and preparing for a
-            mobile app public launch by Q4!
+            We’re piloting Afkaa as a web demo with Somali youth in Toronto to
+            collect feedback on our core modules. Next steps include refining
+            our UI/UX based on real user data, expanding lesson sets, and
+            preparing for a mobile app public launch by Q4!
           </Text>
         </Box>
       </Box>
@@ -137,28 +145,6 @@ const Body = () => {
           />
         </Box>
       </Box>
-
-      <Box>
-        <Heading as="h3" size="md" mb={4}>
-          Try Afkaa
-        </Heading>
-        <Text
-          mb={2}
-          fontSize={{ base: "md", md: "lg", lg: "xl" }}
-          lineHeight={{ base: "tall", md: "2xl" }}
-        >
-          Experience Afkaa yourself!
-        </Text>
-        <Link
-          href="https://afkaa.com"
-          isExternal
-          color="blue.500"
-          fontWeight="bold"
-          fontSize={{ base: "md", md: "lg" }}
-        >
-          Visit Afkaa Demo <Icon as={ExternalLinkIcon} mx="2px" />
-        </Link>
-      </Box>
     </VStack>
   );
 };
@@ -171,13 +157,16 @@ const Afkaa = () => {
         <Body />
         <Center mt={6}>
           <Button
+            size="lg"
+            px={8}
+            py={6}
             rightIcon={<ExternalLinkIcon />}
             colorScheme="blue"
             as="a"
             href="https://afkaa2-hjl4.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            fontSize={{ base: "md", md: "lg" }}
+            fontSize={{ base: "lg", md: "xl" }}
           >
             Launch Afkaa Demo
           </Button>
