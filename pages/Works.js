@@ -16,6 +16,8 @@ import Transition from "../components/transition";
 import NextLink from "next/link";
 
 const WorkItem = ({ href, imageSrc, imageAlt, title, description, size }) => {
+  // size = "featured" | "tile"
+  const isFeatured = size === "featured";
 
   return (
     <Box
@@ -56,6 +58,14 @@ const WorkItem = ({ href, imageSrc, imageAlt, title, description, size }) => {
 };
 
 const Works = () => {
+  // Featured project
+  const featured = {
+    href: "/Afkaa",
+    imageSrc: "afkaa.png",
+    imageAlt: "Somali language learning app",
+    title: "Afkaa",
+    description: "An interactive and gamified way to learn Somali",
+  };
 
   // Past works
   const pastWorks = [
@@ -106,6 +116,17 @@ const Works = () => {
 
   return (
     <Container maxW="container.xl" py={10}>
+      {/* Featured */}
+      <Box mb={12}>
+        <Heading as="h3" size="lg" mb={6}>
+          Featured Project
+        </Heading>
+        <Center>
+          {" "}
+          <WorkItem {...featured} size="featured" />
+        </Center>
+      </Box>
+
       {/* Past Works */}
       <Box>
         <Heading as="h3" size="lg" mb={6}>
