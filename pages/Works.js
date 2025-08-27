@@ -58,14 +58,6 @@ const WorkItem = ({ href, imageSrc, imageAlt, title, description, size }) => {
 };
 
 const Works = () => {
-  // Featured project
-  const featured = {
-    href: "/Afkaa",
-    imageSrc: "afkaa.png",
-    imageAlt: "Somali language learning app",
-    title: "Afkaa",
-    description: "An interactive and gamified way to learn Somali",
-  };
 
   // Past works
   const pastWorks = [
