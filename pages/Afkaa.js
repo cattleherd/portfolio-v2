@@ -163,7 +163,7 @@ const Afkaa = () => {
             rightIcon={<ExternalLinkIcon />}
             colorScheme="blue"
             as="a"
-            href="google.com"
+            href="https://afkaa2-hjl4.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             fontSize={{ base: "lg", md: "xl" }}
