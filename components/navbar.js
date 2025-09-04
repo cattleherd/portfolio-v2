@@ -56,11 +56,6 @@ const Navbar = (props) => {
             </NextLink>
           </Box>
           <Box margin={"12px"}>
-            <NextLink href="/Works" passHref>
-              Works
-            </NextLink>
-          </Box>
-          <Box margin={"12px"}>
             <NextLink href="/ContactForm" passHref>
               Contact
             </NextLink>
