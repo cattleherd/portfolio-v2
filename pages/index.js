@@ -142,6 +142,7 @@ export default function Home() {
               href="mailto:radwan.hussein@protonmail.com"
             />
           </HStack>
+          <PortfolioButton /> {/* Button to view portfolio */}
         </VStack>
 
         {/* Right column with 3D model (only on larger screens) */}
